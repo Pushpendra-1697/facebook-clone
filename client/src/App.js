@@ -5,8 +5,8 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-   <All_route/>
+      <Navbar />
+      <All_route />
     </div>
   );
 }

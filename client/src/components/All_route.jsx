@@ -12,6 +12,8 @@ import PrivetRouts from "./PrivetRouts";
 import LogProfile from "../pages/LogProfile";
 import RigthCompo from "../post/RigthCompo/RigthCompo";
 import Search from "../pages/Search";
+import Lobby from "../screens/Lobby";
+import Room from "../screens/Room";
 
 function All_route() {
   return (
@@ -68,6 +70,8 @@ function All_route() {
         <Route path="/adminSignup" element={<Admin_signup />}></Route>
         <Route path="/userLogin" element={<User_login />}></Route>
         <Route path="/userSignup" element={<User_signup />}></Route>
+        <Route path="/lobby" element={<Lobby />}></Route>
+        <Route path="/room/:roomId" element={<Room />}></Route>
       </Routes>
     </div>
   );

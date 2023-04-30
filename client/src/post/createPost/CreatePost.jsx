@@ -12,9 +12,6 @@ import moment from 'moment';
 let id = localStorage.getItem("id");
 
 
-
-
-
 const initState = {
   user_profilePicture:"",
   postTime:"",
@@ -31,12 +28,7 @@ export default function CreatePost() {
   const [image, setimage] = useState("");
   const [formData, setFormData] = useState(initState);
   const [userdata, setuserdata] = useState()
-
-
-
-  
   const toast = useToast();
-
 
   let time = moment().format('MMMM Do YYYY, h:mm:ss a')
 
@@ -51,13 +43,10 @@ export default function CreatePost() {
       console.log(error);
     }
   }
-
 useEffect(() => {
   getId()
   getUser()
 }, [])
-  
-
  
 
   // cloudinaty && post
@@ -82,12 +71,6 @@ useEffect(() => {
       .catch((err) => {
         console.log(err);
       });
-
-
-      
-
-
-
   };
 
   // console.log("data",formData)
@@ -96,8 +79,6 @@ useEffect(() => {
   const add = async () => {
     try{
       let res=await axios.post('https://graceful-fox-apron.cyclic.app/post',formData)
-      console.log(res.data)
-
       if(res.data){
             toast({
       position: "top",
